@@ -7,6 +7,10 @@
     font-family: 'Roboto Serif', serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style-type: none;
 }
@@ -29,6 +33,7 @@ a {
     background-color: #F2AC0D;
     border: none;
     color: #1C3F39;
+    cursor: pointer;
 }
 
 span {
@@ -73,10 +78,10 @@ nav {
 }
 
 .navigation-menu {
-    width: fit-content;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -87,7 +92,6 @@ nav {
     align-items: center;
     gap: 30px;
     padding-right: 20px;
-    border-right: 2px solid #1C3F39;
 }
 
 .nav-links li {
@@ -146,12 +150,16 @@ nav {
 }
 
 .header-text p {
-    color: #556561;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
     text-align: center;
+    color: #556561;
 }
 
 .header-btns {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -167,6 +175,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .header-btn-img {
@@ -196,7 +205,7 @@ nav {
 }
 
 .header-images img:nth-child(2) {
-    width: 38%;
+    width: 40%;
 }
 
 #short-details {
@@ -241,11 +250,11 @@ nav {
 
 main {
     width: 100%;
-    background: #F5F5F5;
+    background: #e9e6d7;
 }
 
 .about-section {
-    margin-top: 150px;
+    padding-top: 150px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -289,8 +298,8 @@ main {
 
 .about-section-text p {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 28px;
     color: #556561;
 }
 
@@ -300,7 +309,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     margin-top: 150px;
 }
 
@@ -349,6 +357,14 @@ main {
     border: none;
     font-size: 18px;
     color: #1C3F39;
+    padding: 20px;
+}
+
+.option {
+    width: 200px;
+    height: 40px;
+    color: #1C3F39;
+    background-color: #e7e7e7;
 }
 
 .contents {
@@ -372,6 +388,23 @@ main {
     border-radius: 8px;
 }
 
+.active-surah {
+    color: #ffffff;
+    background-color: #1C3F39;
+}
+
+.active-surah h1 {
+    color: #ffffff;
+}
+
+.active-surah .surah-details h2 {
+    background-color: #ffffff;
+}
+
+.active-surah .surah-name p {
+    color: #ffffff;
+}
+
 .surah-details {
     display: flex;
     flex-direction: row;
@@ -381,8 +414,12 @@ main {
 .surah-details h2 {
     width: fit-content;
     height: fit-content;
-    font-weight: 500;
-    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #605E54;
+    padding: 10px 15px;
     background-color: #E9E6D7;
     border-radius: 10px;
 }
@@ -395,8 +432,16 @@ main {
 }
 
 .surah-name h1 {
-    font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.surah-name p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #556561;
 }
 
 .surah-name-arabic {
@@ -411,28 +456,42 @@ main {
 /* -----------------reciters section --------------- */
 .reciters {
     width: 100%;
-    margin-top: 100px;
     background-color: #1C3F39;
+}
+
+.reciters-container {
+    max-width: 1400px;
+    margin: 100px auto 0 auto;
     display: grid;
     grid-template-columns: 55% 43%;
     gap: 2%;
     padding: 100px 0;
 }
 
-.reciters div:nth-child(1) {
+.reciters-container div:nth-child(1) {
     width: 100%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: 24% 24% 50%;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: 24% 24% 50%;
+    justify-content: space-between; */
 }
 
-.reciters div:nth-child(1) img {
-    width: 100%;
+.reciters-image {
+    width: 24%;
     height: 100%;
 }
 
-.reciters div:nth-child(2) {
+.active-reciter-image {
+    display: flex;
+    width: 50%;
+}
+
+.reciters-container div:nth-child(2) {
+    width: 100%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -440,36 +499,50 @@ main {
     padding: 10%;
 }
 
-.reciters div:nth-child(2) h1 {
+.reciters-container div:nth-child(2) h1 {
     font-size: 36px;
 }
 
-.reciters div:nth-child(2) section {
+.reciters-container div:nth-child(2) section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.reciters div:nth-child(2) section h2 {
-    font-size: 4vw;
+.reciters-container div:nth-child(2) section h2 {
+    font-size: 3vw;
     text-align: center;
+    color: #3C645D;
 }
 
-.reciters div:nth-child(2) section button {
-    /* color: #B7CBC7; */
+.reciters-container div:nth-child(2) p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #B7CBC7;
+}
+
+.reciters-container div:nth-child(2) section button {
     color: #ffffff;
     background-color: transparent;
     border: 2px solid #B7CBC7;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 /* -------------------blog section-------------------------- */
+#latest-islamic-blog {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #F5F5F5;
+}
+
 .latest-islamic-blog {
     width: 100%;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -485,13 +558,18 @@ main {
 
 .title-text {
     text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
     color: #556561;
 }
 
 .blogs {
+    margin-top: 50px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     column-gap: 30px;
     row-gap: 30px;
 }
@@ -504,6 +582,12 @@ main {
     background: #FFFFFF;
     box-shadow: 0px 18px 56px rgba(0, 0, 0, 0.07);
     border-radius: 8px;
+    transition: 0.4s;
+}
+
+.blog:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 18px 56px rgba(113, 164, 175, 0.819);
 }
 
 .blog img {
@@ -548,6 +632,7 @@ main {
     color: #F2AC0D;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .latest-islamic-blog .button {
@@ -557,7 +642,6 @@ main {
 
 /* ------------------End of Main section----------------- */
 #last-part-main-section {
-    margin-top: 100px;
     width: 100%;
     background-color: #1C3F39;
 }
@@ -587,7 +671,6 @@ main {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    /* or 175% */
     text-align: center;
 
     color: #B7CBC7;
@@ -760,13 +843,14 @@ footer {
 /* -----------------------Mobile View--------------------------- */
 
 @media (max-width:800px) {
-    h1:nth-of-type(n){
+    h1:nth-of-type(n) {
         font-size: 28px;
     }
-    
-    .container{
+
+    .container {
         padding: 0 20px;
     }
+
     .short-details {
         flex-direction: column;
     }
@@ -822,50 +906,62 @@ footer {
         gap: 40px;
     }
 
-    .reciters{
-        grid-template-columns: 100%;
-    }
-    .reciters div:nth-child(1){
+    .reciters-container {
         grid-template-columns: 100%;
     }
 
-    .reciters div:nth-child(1) img:nth-child(1){
-        display: none;
-    }
-    .reciters div:nth-child(1) img:nth-child(2){
+    .reciters-image {
         display: none;
     }
 
-    .footer-section{
+    .active-reciter-image {
+        display: flex;
+        width: 100%;
+    }
+
+    .footer-section {
         flex-direction: column;
         gap: 30px;
     }
-    .button-group button img{
+
+    .button-group button img {
         width: 15px;
         height: 15px;
     }
-    .button-text h3{
+
+    .button-text h3 {
         font-size: 8px;
     }
-    .button-text h2{
+
+    .button-text h2 {
         font-size: 10px;
     }
 }
 
-@media (max-width: 400px) {
-    .blogs{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+@media (max-width: 415px) {
+    .blogs {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
-    .blog{
+
+    .blog {
         grid-template-columns: 100%;
     }
-    .button-group{
+
+    .surah-name h1 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .button-group {
         flex-direction: column;
     }
-    .button-group button{
+
+    .button-group button {
         width: 160px;
     }
-    .reading-section-navigators{
+
+    .reading-section-navigators {
         flex-direction: column;
         gap: 20px;
     }

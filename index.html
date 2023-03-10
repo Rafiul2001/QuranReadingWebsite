@@ -116,14 +116,14 @@
                 <h1>Read holy quran with <br><span>translations</span></h1>
                 <div class="reading-section-navigators">
                     <ul class="reading-section-navigator-links">
-                        <li class="active-navigator">Surah</li>
-                        <li>Juz</li>
+                        <li onclick="showSurahs()" id="surah" class="active-navigator">Surah</li>
+                        <li onclick="showJuzs()" id="juz">Juz</li>
                     </ul>
                     <form action="">
                         <label for="order">Sort by: </label>
                         <select class="drop-down" name="order" id="order">
-                            <option value="ascending">Ascending</option>
-                            <option value="descending">Descending</option>
+                            <option class="option" value="ascending">Ascending</option>
+                            <option class="option" value="descending">Descending</option>
                         </select>
                     </form>
                 </div>
@@ -143,54 +143,145 @@
                     </article>
                     <article class="surah">
                         <div class="surah-details">
-                            <h2>01</h2>
+                            <h2>02</h2>
                             <div class="surah-name">
-                                <h1>Al-Fatihah</h1>
-                                <p>The Openar</p>
+                                <h1>Al-Baqarah</h1>
+                                <p>The Cow</p>
                             </div>
                         </div>
                         <div class="surah-name-arabic">
-                            <h1>الفاتحة</h1>
-                            <p>7 verses</p>
+                            <h1>البقرة</h1>
+                            <p>286 verses</p>
                         </div>
                     </article>
                     <article class="surah">
                         <div class="surah-details">
-                            <h2>01</h2>
+                            <h2>03</h2>
                             <div class="surah-name">
-                                <h1>Al-Fatihah</h1>
-                                <p>The Openar</p>
+                                <h1>Al-Imran</h1>
+                                <p>Family of Imran</p>
                             </div>
                         </div>
                         <div class="surah-name-arabic">
-                            <h1>الفاتحة</h1>
-                            <p>7 verses</p>
+                            <h1>آل عمران</h1>
+                            <p>200 verses</p>
                         </div>
                     </article>
                     <article class="surah">
                         <div class="surah-details">
-                            <h2>01</h2>
+                            <h2>04</h2>
                             <div class="surah-name">
-                                <h1>Al-Fatihah</h1>
-                                <p>The Openar</p>
+                                <h1>An-Nisa</h1>
+                                <p>The Women</p>
                             </div>
                         </div>
                         <div class="surah-name-arabic">
-                            <h1>الفاتحة</h1>
-                            <p>7 verses</p>
+                            <h1>النساء</h1>
+                            <p>176 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah active-surah">
+                        <div class="surah-details">
+                            <h2>05</h2>
+                            <div class="surah-name">
+                                <h1>Al-Maidah</h1>
+                                <p>The Table Spread</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>المائدة</h1>
+                            <p>120 verses</p>
                         </div>
                     </article>
                     <article class="surah">
                         <div class="surah-details">
-                            <h2>01</h2>
+                            <h2>06</h2>
                             <div class="surah-name">
-                                <h1>Al-Fatihah</h1>
-                                <p>The Openar</p>
+                                <h1>Al-Anam</h1>
+                                <p>The Cattle</p>
                             </div>
                         </div>
                         <div class="surah-name-arabic">
-                            <h1>الفاتحة</h1>
-                            <p>7 verses</p>
+                            <h1>الانام</h1>
+                            <p>165 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>07</h2>
+                            <div class="surah-name">
+                                <h1>Al-Araf</h1>
+                                <p>The Heights</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>العراف</h1>
+                            <p>206 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>08</h2>
+                            <div class="surah-name">
+                                <h1>Al-Anfal</h1>
+                                <p>The Spoils of War</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>الأنفال</h1>
+                            <p>75 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>09</h2>
+                            <div class="surah-name">
+                                <h1>At-Taubah</h1>
+                                <p>The Repentance</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>التوبة</h1>
+                            <p>129 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>10</h2>
+                            <div class="surah-name">
+                                <h1>Yunus</h1>
+                                <p>Jonah</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>يونس</h1>
+                            <p>109 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>11</h2>
+                            <div class="surah-name">
+                                <h1>Hud</h1>
+                                <p>Hud</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>هود</h1>
+                            <p>123 verses</p>
+                        </div>
+                    </article>
+                    <article class="surah">
+                        <div class="surah-details">
+                            <h2>12</h2>
+                            <div class="surah-name">
+                                <h1>Yusuf</h1>
+                                <p>Joseph</p>
+                            </div>
+                        </div>
+                        <div class="surah-name-arabic">
+                            <h1>يوسف</h1>
+                            <p>111 verses</p>
                         </div>
                     </article>
                 </div>
@@ -198,63 +289,67 @@
             </section>
         </div>
         <section class="reciters">
-            <div>
-                <img src="assets/images/unsplash_LI7jB1925j0.png" alt="img">
-                <img src="assets/images/unsplash_LI7jB1925j0-1.png" alt="img">
-                <img src="assets/images/unsplash_fkgsW3bhFzU.png" alt="img">
+            <div class="reciters-container">
+                <div>
+                    <img class="reciters-image" src="assets/images/unsplash_LI7jB1925j0.png" alt="img">
+                    <img class="reciters-image" src="assets/images/unsplash_LI7jB1925j0-1.png" alt="img">
+                    <img class="reciters-image active-reciter-image" src="assets/images/unsplash_fkgsW3bhFzU.png" alt="img">
+                </div>
+                <div>
+                    <h1>Listen by your <br> favorite <span>Reciters</span></h1>
+                    <p>Listen holy quran by your favourite reciters and feel the best of quran. </p>
+                    <section>
+                        <button><i class="fa-solid fa-angle-left"></i></button>
+                        <h2><i class="fa-solid fa-ellipsis"></i></h2>
+                        <button><i class="fa-solid fa-angle-right"></i></button>
+                    </section>
+                </div>
             </div>
-            <div>
-                <h1>Listen by your <br> favorite <span>Reciters</span></h1>
-                <p>Listen holy quran by your favourite reciters and feel the best of quran. </p>
-                <section>
-                    <button><i class="fa-solid fa-angle-left"></i></button>
-                    <h2>...</h2>
-                    <button><i class="fa-solid fa-angle-right"></i></button>
+        </section>
+        <section id="latest-islamic-blog">
+            <div class="container">
+                <section class="latest-islamic-blog">
+                    <h1>Latest Islamic blog</h1>
+                    <p class="title-text">Read top free Islamic articles & blog posts on the Internet <br> and know about
+                        islam.</p>
+                    <div class="blogs">
+                        <article class="blog">
+                            <img src="assets/images/Rectangle 72-3.png" alt="img">
+                            <div class="blog-text">
+                                <h2>How many times bismillah <br> repeated in Quran?</h2>
+                                <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
+                                <button>Read Now</button>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <img src="assets/images/Rectangle 72-2.png" alt="img">
+                            <div class="blog-text">
+                                <h2>How many times bismillah <br> repeated in Quran?</h2>
+                                <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
+                                <button>Read Now</button>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <img src="assets/images/Rectangle 72-1.png" alt="img">
+                            <div class="blog-text">
+                                <h2>How many times bismillah <br> repeated in Quran?</h2>
+                                <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
+                                <button>Read Now</button>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <img src="assets/images/Rectangle 72.png" alt="img">
+                            <div class="blog-text">
+                                <h2>How many times bismillah <br> repeated in Quran?</h2>
+                                <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
+                                <button>Read Now</button>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="button">Read All</button>
                 </section>
             </div>
         </section>
-        <div class="container">
-            <section class="latest-islamic-blog">
-                <h1>Latest Islamic blog</h1>
-                <p class="title-text">Read top free Islamic articles & blog posts on the Internet <br> and know about
-                    islam.</p>
-                <div class="blogs">
-                    <article class="blog">
-                        <img src="assets/images/Rectangle 72-3.png" alt="img">
-                        <div class="blog-text">
-                            <h2>How many times bismillah <br> repeated in Quran?</h2>
-                            <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
-                            <button>Read Now</button>
-                        </div>
-                    </article>
-                    <article class="blog">
-                        <img src="assets/images/Rectangle 72-2.png" alt="img">
-                        <div class="blog-text">
-                            <h2>How many times bismillah <br> repeated in Quran?</h2>
-                            <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
-                            <button>Read Now</button>
-                        </div>
-                    </article>
-                    <article class="blog">
-                        <img src="assets/images/Rectangle 72-1.png" alt="img">
-                        <div class="blog-text">
-                            <h2>How many times bismillah <br> repeated in Quran?</h2>
-                            <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
-                            <button>Read Now</button>
-                        </div>
-                    </article>
-                    <article class="blog">
-                        <img src="assets/images/Rectangle 72.png" alt="img">
-                        <div class="blog-text">
-                            <h2>How many times bismillah <br> repeated in Quran?</h2>
-                            <p>How many times bismillah repeated in Quran? “In the name of God the most merciful...</p>
-                            <button>Read Now</button>
-                        </div>
-                    </article>
-                </div>
-                <button class="button">Read All</button>
-            </section>
-        </div>
         <div id="last-part-main-section">
             <div class="container">
                 <section class="last-part-main-section">
@@ -341,7 +436,7 @@
             </section>
             <section class="go-up">
                 <hr>
-                <button><i class="fa-sharp fa-solid fa-chevron-up"></i></button>
+                <button><a href="#header"><i class="fa-sharp fa-solid fa-chevron-up"></i></a></button>
             </section>
             <form class="language-selector">
                 <select class="language" name="language" id="language">
